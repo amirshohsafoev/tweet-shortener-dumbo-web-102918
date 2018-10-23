@@ -15,5 +15,5 @@ array.collect do |string|
 puts 
 end
 
-binding.pry
+#binding.pry
 end
