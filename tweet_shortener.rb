@@ -21,6 +21,7 @@ end"
 def word_substituter(tweet_one)
 array = tweet_one.split()
 dictionary.map do |key, value|
+  binding.pry
   key.include?(array)
 binding.pry
 end
