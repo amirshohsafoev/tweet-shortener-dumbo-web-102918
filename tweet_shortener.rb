@@ -3,26 +3,29 @@ require 'pry'
 def dictionary
   dictionary_hash = { "hello" => 'hi', "to" => '2', "two" => '2', "too" => '2', "for" => '4', "four" => '4', 'be' => 'b', 'you'=> 'u', "at" => '@', "and" => '&'}
 end
-"def word_substituter(tweet_one)
+def word_substituter(tweet_one)
 
 array = tweet_one.split()
 #binding.pry
 #dictionary.keys.select {|a| a == array}
 array.collect do |string| 
-end
+
   #binding.pry
   #string.include?(dictionary.keys)
-  dictionary do |key, value|
-  if dictionary.keys.include?(string) 
-    
+  dictionary.map do |k, v|
+ if  string.include?(k) 
+  string.gsub!(v)
+end    
+end.flatten.compact
 end
-end"
+end
 
-def word_substituter(tweet_one)
+"def word_substituter(tweet_one)
 array = tweet_one.split()
-dictionary.keys.map do |k|
+dictionary.map do |keys, value|
+  #keys.each  do |k|
   #binding.pry
-   array.include?(k)
+array.include?(keys)
 #binding.pry
 end
-end
+end"
