@@ -20,9 +20,9 @@ end"
 
 def word_substituter(tweet_one)
 array = tweet_one.split()
-dictionary.map do |key, value|
-  binding.pry
-  key.include?(array)
-binding.pry
+dictionary.keys.map do |k|
+  #binding.pry
+   array.include?(k)
+#binding.pry
 end
 end
