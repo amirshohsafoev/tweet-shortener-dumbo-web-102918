@@ -9,8 +9,11 @@ array = tweet_one.split()
 #binding.pry
 #dictionary.keys.select {|a| a == array}
 array.collect do |string| 
-  binding.pry
-  string.include?(dictionary.keys.to_s)
-end 
-#binding.pry
+  #binding.pry
+  #string.include?(dictionary.keys)
+  if dictionary.keys.include?(string) 
+puts 
+end
+
+binding.pry
 end
