@@ -49,7 +49,15 @@ def selective_tweet_shortener(tweets)
 end
 end
 
-def shortened_tweet_truncuator
+def shortened_tweet_truncator(tweet)
+  tweet_three = word_substituter(tweet)
+  if tweet_three == 139 #word_substituter(tweet).length > 140 
+    puts tweet_three
+  else
+    tweet_three[0..139]
+    #binding.pry
+  end
+end
   
 
 
