@@ -49,7 +49,12 @@ def selective_tweet_shortener(tweets)
 end
 end
 
-def shortened_tweet_truncuator
+def shortened_tweet_truncuator(tweet)
+  if word_substituter(tweet).length > 140 
+    puts word_substituter(tweet)[0...140]
+  else
+    word_substituter(tweet)
+  end
 end
   
 
