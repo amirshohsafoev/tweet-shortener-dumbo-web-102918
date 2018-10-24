@@ -54,7 +54,7 @@ def shortened_tweet_truncator(tweet)
   if tweet_three == 139 #word_substituter(tweet).length > 140 
     puts tweet_three
   else
-    tweet_three[0..140]
+    tweet_three[0..139]
     #binding.pry
   end
 end
