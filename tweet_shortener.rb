@@ -50,6 +50,7 @@ end
 end
 
 def shortened_tweet_truncuator
+end
   
 
 
