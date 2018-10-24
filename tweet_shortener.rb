@@ -54,7 +54,7 @@ def shortened_tweet_truncator(tweet)
     puts word_substituter(tweet)[0...140]
   else
     word_substituter(tweet)
-    binding.pry
+    #binding.pry
   end
 end
   
