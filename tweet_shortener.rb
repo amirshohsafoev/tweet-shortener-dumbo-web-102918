@@ -6,8 +6,8 @@ end
 def word_substituter(tweet_one)
 array = tweet_one.split(" ")
  array.collect do |string|
-  if dictionary.keys.include?(string)
-      dictionary[string]
+  if dictionary.keys.include?(string.downcase)
+      dictionary[string.downcase]
     else
        string
       #binding.pry
@@ -31,3 +31,25 @@ end
 end
 end
 end"
+def bulk_tweet_shortener(array_of_tweets)
+  array_of_tweets.collect do |tweet|
+  puts  word_substituter(tweet)
+end
+end
+
+def selective_tweet_shortener(tweets)
+#tweets.each do |tweet|
+ # tweet_one = tweet.split(" ")
+  #if tweet_one > 140 
+   if tweets.length  > 140
+    word_substituter(tweets)
+  else
+    tweets
+    #binding.pry
+end
+end
+
+def shortened_tweet_truncuator
+  
+
+
